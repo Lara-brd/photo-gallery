@@ -1,0 +1,13 @@
+
+<!-- Grid masonry -->
+<div class="grid">
+    <ngx-masonry  [options]="{gutter: 15, horizontalOrder: true , fitWidth: true}" 
+                  [ordered]="true">
+      <div ngxMasonryItem class="grid-item shadow" 
+                          *ngFor="let photo of photoList">
+        <img [src]="photo.urls.small_s3" alt="">
+        <p>Photo by {{photo.user.name}}</p>
+      </div>
+    </ngx-masonry>
+  </div>
+

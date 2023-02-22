@@ -1,0 +1,20 @@
+
+<h2>Infinite scroll</h2>
+<app-header (onNewQuery)="getNewQuery($event)"></app-header>
+
+<!-- (scrolled) - scroll infinito, método que se activa al hacer scroll -->
+<section
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()">
+
+      <!-- galeria masonry - componente reutilizable - recibe un array de objetos -->
+        <div *ngIf="onRandomOption; else search">
+            <app-masonry-list [photoList]="listPhotos"></app-masonry-list>
+        </div>
+        <ng-template #search>
+            <app-masonry-list [photoList]="searchList"></app-masonry-list>
+        </ng-template>
+        
+</section>
