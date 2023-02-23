@@ -14,6 +14,7 @@ $gray-transparent:rgba(75, 75, 75, 0.327);
 html{
   scroll-behavior: smooth;
   height:100%;
+  width: 100%;
 }
 
 body{
@@ -40,6 +41,33 @@ body{
   }
 
 
+  //////////////////////////////////// SCROLL
+  
+  .scroller {
+    overflow:scroll;
+
+  }
+
+  .scroller::-webkit-scrollbar {
+      background:transparent;
+  }
+  
+  .scroller::-webkit-scrollbar:vertical {
+      width:1em;
+  }
+  
+  .scroller::-webkit-scrollbar:horizontal {
+      height: 0;
+  }
+  
+  .scroller::-webkit-scrollbar-thumb {
+      background-color:rgba(9, 14, 15, 0.752);
+      border-radius: 99999px;
+      border:.3125em solid transparent;
+      background-clip: content-box;
+  }
+
+
 ////////////////////////////////////////////
 
 .shadow{
@@ -61,6 +89,3 @@ body{
 
 ////////////////////////////////////////////////
 
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

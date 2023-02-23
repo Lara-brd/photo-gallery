@@ -1,6 +1,5 @@
 
-<h2>Infinite scroll</h2>
-<app-header (onNewQuery)="getNewQuery($event)"></app-header>
+<app-header (onNewQuery)="getNewQuery($event)" (onInputClosed)="onInputClosed($event)"></app-header>
 
 <!-- (scrolled) - scroll infinito, método que se activa al hacer scroll -->
 <section

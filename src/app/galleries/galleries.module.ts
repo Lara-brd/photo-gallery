@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MasonryListComponent } from './components/masonry-list/masonry-list.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
+import { DialogContentComponent } from './components/dialog-content/dialog-content.component';
 
 
 
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     InfiniteScrollComponent,
     HeaderComponent,
     MasonryListComponent,
-    InfiniteScrollComponent
+    InfiniteScrollComponent,
+    DialogContentComponent
   ],
   imports: [
     CommonModule,

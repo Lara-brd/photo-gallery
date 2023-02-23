@@ -36,6 +36,13 @@ export class InfiniteScrollComponent implements OnInit{
   }
 
 
+  //Volvemos a random al limpiar le input de búsqueda
+  onInputClosed(closed:boolean){
+    // this.onRandomOption = true;
+    // this.getNewData();
+    
+  }
+
   //onScroll --> se dispara al hacer scroll aumentando pagenum y cargando así nuevas imágenes
   onScroll(){
 
@@ -49,6 +56,7 @@ export class InfiniteScrollComponent implements OnInit{
     }
   }
 
+
   //query de búsqueda --> proviene del comp hijo / mandamos la query a servicios para obtener data
   //data incial en búsqueda
   getNewQuery(query:string){
@@ -56,7 +64,7 @@ export class InfiniteScrollComponent implements OnInit{
     this._unsplashSvc.searchQuery = query;
     this._unsplashSvc.getSearchPhotos(this.searchPageNum)
       .subscribe(data => {
-        this.searchList = data.results;
+        this.searchList = [...data.results];
       })
     
 

@@ -7,11 +7,13 @@ import { Search } from '../interfaces/search.interface';
   providedIn: 'root'
 })
 export class UnsplashDataService {
-
+  
   searchQuery:string = '';
 
   key:string = "kc1LTGqcydpvmP_hn866YUHc5VTn_LKcMdo71u_gStg";
   url:string = "https://api.unsplash.com/";
+
+  PhotoSelected:any;
 
   constructor( private http:HttpClient) { }
 
